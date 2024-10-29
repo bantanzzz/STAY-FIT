@@ -1,0 +1,58 @@
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-top: 1px solid #ccc; /* Subtle border for separation */
+}
+
+.contact h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Slight rounding of corners */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Slight rounding of corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.contact-info {
+    margin-top: 30px;
+    text-align: left; /* Aligns contact info to the left */
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}

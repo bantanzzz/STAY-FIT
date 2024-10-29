@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: skyblue;
+}
+
+.services {
+    text-align: center;
+    margin: 90px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.service {
+    margin: 10px;
+    text-align: center;
+}
+
+.service img {
+    width: 200px; /* Adjust the size as needed */
+    height: auto;
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.service p {
+    margin-top: 5px;
+    font-weight: bold;
+}
