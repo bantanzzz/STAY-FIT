@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>membership</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Stay Fit New Membership Form </h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <label for="membership-type">Membership Type:</label>
+            <select id="membership-type" name="membership-type">
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="family">Family</option>
+            </select>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
