@@ -5,36 +5,61 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>membership</title>
     <link rel="stylesheet" href="css/register.css">
-    <script
-         src="scrip.js">
-    </script>
+   
     
 </head>
 <body>
     <div class="form-container">
-        <h2>Stay Fit New Membership Form </h2>
-        <form action="https://script.google.com/macros/s/AKfycbx3JbPQuKLdMeOQ0BDNw8FTpJpiBXOq9Yscv6w0ae1jyBA9viKSVjX-ohyzOXCN3J2M6Q/exec" method="POST">
-            <label for="name">fullName:</label>
-            <input type="text" id="name" name="fullName" required>
-
+        <script>
+            async function handleSubmit(event) {
+              event.preventDefault(); // Prevent the default form submission
+        
+              const form = event.target;
+              const formData = new FormData(form);
+              const data = Object.fromEntries(formData.entries());
+        
+              try {
+                const response = await fetch("https://script.google.com/macros/s/AKfycbw8mi59WKieTAHU3RLhr_VxMQjOnnfjlxLbQjX4nGxP/dev", {
+                  method: "POST",
+                  mode: "no-cors", // Use "no-cors" mode if needed for Apps Script
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                  },
+                  body: new URLSearchParams(data)
+                });
+        
+                // Redirect to homepage on successful submission
+                window.location.href = "index.html"; // Replace with your homepage URL
+              } catch (error) {
+                console.error("Error submitting form:", error);
+              }
+            }
+          </script>
+        </head>
+        <body>
+          <form onsubmit="handleSubmit(event)">
+            <h2>Stay Fit New Membership Form</h2>
+            
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
+            
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-
-            <label for="confirm-password">confirmPassword:</label>
-            <input type="password" id="confirm-password" name="confirmPassword" required>
-
-            <label for="membershiptype">membershipType:</label>
-            <select id="membership-type" name="membershiptype">
-                <option value="standard">Standard</option>
-                <option value="premium">Premium</option>
-                <option value="family">Family</option>
+            
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+            <label for="membershipType">Membership Type:</label>
+            <select id="membershipType" name="membershipType" required>
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
             </select>
-
+            
             <button type="submit">Register</button>
-        </form>
+          </form>
     </div>
 </body>
 </html>
